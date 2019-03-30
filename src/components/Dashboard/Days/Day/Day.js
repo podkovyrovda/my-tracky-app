@@ -1,7 +1,6 @@
 import React from 'react';
 import Track from './Track/Track';
 import s from './Day.module.css';
-import {addTrackActionCreator, updateTrackActionCreator} from '../../../../redux/dashboardReducer';
 
 const Day = (props) => {  
   let trackElements = props.tracks
@@ -10,12 +9,13 @@ const Day = (props) => {
   let newTrack = React.createRef();
 
   let addTrack = () => {
-    props.dispatch(addTrackActionCreator());
+    debugger
+    props.addTrack();
   }
 
   let updateTrack = () => {
     let name = newTrack.current.value;
-    props.dispatch(updateTrackActionCreator(name));
+    props.updateTrack(name);
   }
   
   return ( 
@@ -28,7 +28,11 @@ const Day = (props) => {
                 {trackElements}
               </div>
               <div className={s.addTrackGroup}>
-                <input className={s.addTrackInput} onChange={updateTrack} ref={newTrack} type="text" value={props.newTrack} />
+                <input className={s.addTrackInput}
+                        type="text"  
+                        onChange={updateTrack} 
+                        ref={newTrack} 
+                        value={props.newTrack} />
                 <button onClick={addTrack}>Add</button>
               </div>
             </div>

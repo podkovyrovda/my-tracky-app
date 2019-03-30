@@ -41,10 +41,10 @@ const dashboardReducer = (state = initialState, action) => {
       let newTrack = state.newTrack;
       state.days[1].tracks.push({name: newTrack});
       state.newTrack = '';
-      return state;
+      return {...state};
     case UPDATE_TRACK:
       state.newTrack = action.text;
-      return state;
+      return {...state};
     default:
       return state;
   }

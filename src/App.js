@@ -2,9 +2,9 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
-import Dashboard from './components/Dashboard/Dashboard';
+import DashboardContainer from './components/Dashboard/DashboardContainer';
 import Footer from './components/Footer/Footer';
-import Users from './components/Users/Users';
+import UsersContainer from './components/Users/UsersContainer';
 import Profile from './components/Profile/Profile';
 
 const App = (props) => {
@@ -12,8 +12,8 @@ const App = (props) => {
       <div className='layout'>
           <Header />
           <div className='content'>
-            <Route path='/users' render={()=><Users state={props.state.usersPage.users}/>} />
-            <Route exact path='/' render={()=><Dashboard dashboardPage={props.state.dashboardPage} dispatch={props.dispatch} />} />
+            <Route path='/users' render={()=><UsersContainer />} />
+            <Route exact path='/' render={()=><DashboardContainer />} />
             <Route path='/profile' render={()=><Profile/>} />
           </div>
           <Footer />
