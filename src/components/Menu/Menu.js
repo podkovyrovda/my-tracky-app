@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+
 import s from './Menu.module.css';
 
 const Menu = () => {
@@ -17,7 +18,7 @@ const Menu = () => {
           </li>
         </ul>
       </nav>
-  )
-}
+  );
+};
 
 export default Menu;

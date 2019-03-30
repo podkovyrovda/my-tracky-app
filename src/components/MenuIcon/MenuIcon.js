@@ -1,4 +1,5 @@
 import React from 'react';
+
 import s from './MenuIcon.module.css'
 
 const MenuIcon = () => {
@@ -7,6 +8,6 @@ const MenuIcon = () => {
       <div className={s.menu__icon}></div>
     </div>
   )
-}
+};
 
 export default MenuIcon;

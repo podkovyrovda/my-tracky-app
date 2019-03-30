@@ -1,7 +1,9 @@
 import React from 'react';
-import s from './Header.module.css';
+
 import Menu from '../Menu/Menu';
 import MenuIcon from '../MenuIcon/MenuIcon';
+
+import s from './Header.module.css';
 
 const Header = () => {
   return (
@@ -19,6 +21,6 @@ const Header = () => {
         </div>
       </header>
   );
-}
+};
 
 export default Header;

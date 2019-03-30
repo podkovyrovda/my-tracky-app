@@ -1,13 +1,15 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import './App.css';
+
 import Header from './components/Header/Header';
 import DashboardContainer from './components/Dashboard/DashboardContainer';
 import Footer from './components/Footer/Footer';
 import UsersContainer from './components/Users/UsersContainer';
 import Profile from './components/Profile/Profile';
 
-const App = (props) => {
+import './App.css';
+
+const App = () => {
   return (
       <div className='layout'>
           <Header />
@@ -19,6 +21,6 @@ const App = (props) => {
           <Footer />
       </div>
   );
-}
+};
 
 export default App;

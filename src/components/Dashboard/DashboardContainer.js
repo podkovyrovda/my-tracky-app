@@ -1,24 +1,23 @@
-import Dashboard from './Dashboard';
-import {addTrackActionCreator, updateTrackActionCreator} from '../../redux/dashboardReducer';
 import {connect} from 'react-redux';
 
-let mapStateToProps = (state) => {
-  return {
-    dashboardPage: state.dashboardPage
-  }
-}
+import Dashboard from './Dashboard';
 
-let mapDispatchToProps = (dispatch) => {
-  return {
+import {addTrackActionCreator, 
+        updateTrackActionCreator} from '../../redux/dashboardReducer';
+
+let mapStateToProps = (state) => ({
+    dashboardPage: state.dashboardPage
+});
+
+let mapDispatchToProps = (dispatch) => ({
     addTrack: () => {
       dispatch(addTrackActionCreator());
     },
     updateTrack: (name) => {
       dispatch(updateTrackActionCreator(name));
     }
-  }
-}
+  });
 
-const DashboardContainer = connect(mapStateToProps, mapDispatchToProps)(Dashboard)
+const DashboardContainer = connect(mapStateToProps, mapDispatchToProps)(Dashboard);
 
 export default DashboardContainer;

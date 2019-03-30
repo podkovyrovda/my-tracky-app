@@ -1,17 +1,11 @@
-import Users from './Users';
 import {connect} from 'react-redux';
 
-const mapStateToProps = (state) => {
-  return {
+import Users from './Users';
+
+const mapStateToProps = (state) => ({
     state: state.usersPage.users
-  }
-};
+  });
 
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
-
-const UsersContainer = connect(mapStateToProps, mapDispatchToProps)(Users)
-
+const UsersContainer = connect(mapStateToProps)(Users);
 
 export default UsersContainer;
