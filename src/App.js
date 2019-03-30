@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import {Route} from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
+import Dashboard from './components/Dashboard/Dashboard';
+import Footer from './components/Footer/Footer';
+import Users from './components/Users/Users';
+import Profile from './components/Profile/Profile';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = (props) => {
+  return (
+      <div className='layout'>
+          <Header />
+          <div className='content'>
+            <Route path='/users' render={()=><Users state={props.state.usersPage.users}/>} />
+            <Route exact path='/' render={()=><Dashboard dashboardPage={props.state.dashboardPage} dispatch={props.dispatch} />} />
+            <Route path='/profile' render={()=><Profile/>} />
+          </div>
+          <Footer />
       </div>
-    );
-  }
+  );
 }
 
 export default App;

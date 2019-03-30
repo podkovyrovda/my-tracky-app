@@ -1,0 +1,11 @@
+/* Dashboard */
+
+.welcomeText {
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+}
+
+.streakText {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,12 @@
+.userAva {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0px 0px 6px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 13px 1px rgba(250, 248, 161, 0.3);
+}
+
+.userAva img {
+  height: 40px;
+}

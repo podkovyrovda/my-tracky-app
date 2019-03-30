@@ -1,0 +1,27 @@
+.day {
+  margin-left: 15px;
+}
+
+.day__date {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.day__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;
+  height: 280px;
+  background-color: #e2e2e2;
+  border-radius: 13px;
+  border: 1px solid #282c34;
+  color: #323232;
+  padding: 40px 20px 40px 20px;
+  margin-bottom: 30px;
+}
+
+.addTrackGroup {
+  display: inline-flex;
+}

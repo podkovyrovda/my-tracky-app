@@ -1,0 +1,42 @@
+/* Dashboard */
+
+.welcomeText {
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+}
+
+.streakText {
+  margin-bottom: 40px;
+}
+
+/* Tracks */
+
+.trackRow {
+  display: flex;
+  width: 830px;
+  margin-left: -295px;
+  overflow-x: hidden;
+  padding-left: 30px; 
+}
+
+.track {
+  margin-left: 15px;
+}
+
+.track__date {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.track__card {
+  width: 220px;
+  height: 280px;
+  background-color: #e2e2e2;
+  border-radius: 13px;
+  border: 1px solid #282c34;
+  color: #323232;
+  padding: 40px 20px 40px 20px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,31 @@
+.menu__iconGroup {
+  position: relative;
+}
+
+.menu__icon {
+  width: 22px;
+  display: block;
+  height: 1px;
+  background-color: #e2e2e2;
+  left: 0px;
+}
+
+.menu__icon::before {
+  content: '';
+  width: 17px;
+  height: 1px;
+  background-color: #e2e2e2;
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.menu__icon::after {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background-color:#e2e2e2;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}

@@ -1,33 +1,100 @@
-.App {
-  text-align: center;
-}
+/* Main */
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+body {
   background-color: #282c34;
   min-height: 100vh;
+  color: #e2e2e2;
+}
+
+a {
+  position: relative;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background-color: #faf8a1;
+  width: 0;
+  margin-top: 3px;
+  transition: .3s all;
+}
+
+a:hover {
+  color: #faf8a1!important;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: .3s all;
+}
+
+p {
+  line-height: 25px;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout */
+
+.layout {
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  grid-template-columns: 12fr;
+  grid-template-areas: 
+  "h"
+  "c"
+  "f";
+  grid-row-gap: 60px;
+}
+
+.header {
+  grid-area: h;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  grid-area: c;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow-x: hidden;
+}
+
+.footer {
+  grid-area: f;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Grid */
+
+.container {
+  width: 315px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Conditions */
+
+.hide {
+  display: none;
 }
