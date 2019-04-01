@@ -16,6 +16,9 @@ const Menu = () => {
           <li className={s.menu__listItem}>
             <NavLink to='/profile'>Profile</NavLink>
           </li>
+          <li className={s.menu__listItem}>
+            <NavLink to='/settings'>Settings</NavLink>
+          </li>
         </ul>
       </nav>
   );

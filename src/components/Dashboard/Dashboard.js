@@ -17,10 +17,10 @@ const Dashboard = (props) => {
   return ( 
       <div className='container'>
         <UserAva />
-        <p className={s.welcomeText}>Hello, {state.user.name}.</p>
+        <p className='welcomeText'>Hello, {state.user.name}.</p>
         <p className={s.streakText}>You have a nice streak 
-          <br></br>in {state.user.streak.value} days of 
-          <a href='#'><i>{state.user.streak.name} </i></a> with {state.user.streak.service}.</p>
+          <br></br>
+        in {state.user.streak.value} days of <a href='#'><i>{state.user.streak.name} </i></a> with {state.user.streak.service}.</p>
         <Days arr={daysElements}/>
       </div>
   )

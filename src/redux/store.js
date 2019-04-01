@@ -1,10 +1,10 @@
 import {createStore, combineReducers} from 'redux';
 import dashboardReducer from './dashboardReducer';
-import userReducer from './userReducer';
+import usersReducer from './usersReducer';
 
 let reducers = combineReducers({
   dashboardPage: dashboardReducer,
-  usersPage: userReducer
+  usersPage: usersReducer
 });
 
 let store = createStore(reducers);

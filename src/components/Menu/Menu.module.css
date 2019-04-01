@@ -1,9 +1,14 @@
 .menu__list {
   display: flex;
+  justify-content: center;
 }
 
 .menu__listItem {
   margin-left: 20px;
+}
+
+.menu__listItem:first-child {
+  margin-left: 0px;
 }
 
 .menu__listItem a {

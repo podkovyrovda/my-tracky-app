@@ -8,6 +8,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import Profile from './components/Profile/Profile';
 
 import './App.css';
+import Settings from './components/Settings/Settings';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path='/users' render={()=><UsersContainer />} />
             <Route exact path='/' render={()=><DashboardContainer />} />
             <Route path='/profile' render={()=><Profile/>} />
+            <Route path='/settings' render={()=><Settings/>} />
           </div>
           <Footer />
       </div>

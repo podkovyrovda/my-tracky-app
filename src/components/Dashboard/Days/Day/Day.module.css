@@ -1,6 +1,6 @@
-.day {
+/* .day {
   margin-left: 15px;
-}
+} */
 
 .day__date {
   font-size: 12px;
@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 220px;
-  height: 280px;
   background-color: #e2e2e2;
   border-radius: 13px;
   border: 1px solid #282c34;

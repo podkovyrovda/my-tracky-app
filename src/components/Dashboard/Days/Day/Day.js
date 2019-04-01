@@ -6,17 +6,17 @@ const Day = (props) => {
   let trackElements = props.tracks
       .map(t => <Track name={t.name} />);
 
-  let newTrack = React.createRef();
+  // let newTrack = React.createRef();
 
-  let addTrack = () => {
-    debugger
-    props.addTrack();
-  }
+  // let addTrack = () => {
+  //   debugger
+  //   props.addTrack();
+  // }
 
-  let updateTrack = () => {
-    let name = newTrack.current.value;
-    props.updateTrack(name);
-  }
+  // let updateTrack = () => {
+  //   let name = newTrack.current.value;
+  //   props.updateTrack(name);
+  // }
   
   return ( 
           <div className={s.day}>
@@ -27,14 +27,14 @@ const Day = (props) => {
               <div>
                 {trackElements}
               </div>
-              <div className={s.addTrackGroup}>
+              {/* <div className={s.addTrackGroup}>
                 <input className={s.addTrackInput}
                         type="text"  
                         onChange={updateTrack} 
                         ref={newTrack} 
                         value={props.newTrack} />
                 <button onClick={addTrack}>Add</button>
-              </div>
+              </div> */}
             </div>
           </div>
   )

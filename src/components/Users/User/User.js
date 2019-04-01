@@ -8,7 +8,7 @@ const User = (props) => {
     <NavLink to={path}>
       <div className={s.user}>
         <div className={s.user__ava}>
-          <img src={props.avaSrc}/>
+          <img src={props.avaSrc ? props.avaSrc : 'https://via.placeholder.com/100' }/>
         </div>
         <div className={s.user__name}>{props.name}</div>
       </div>

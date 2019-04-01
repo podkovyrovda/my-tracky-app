@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className='container'>
       <div className='profile'>
-        Profile
+      <p className='welcomeText'>Profile</p>
       </div>
     </div>
   );

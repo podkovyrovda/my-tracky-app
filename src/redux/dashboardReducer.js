@@ -1,16 +1,9 @@
+
 const ADD_TRACK = 'ADD-TRACK';
 const UPDATE_TRACK = 'UPDATE-TRACK';
 
 const initialState = {
     days: [
-      { day:'Yesterday', 
-        date:'Tuesday, March, 26', 
-        tracks: [
-          {name: 'Running'},
-          {name: 'Coding'},
-          {name: 'No aclohol'}
-        ]
-      },
       { day:'Today',
         date:'Wednesday, March, 27', 
         tracks: [
@@ -18,15 +11,7 @@ const initialState = {
             {name: 'Coding'},
             {name: 'No aclohol'}
           ]
-        },
-      { day:'Tomorrow',
-      date:'Thursday, March, 28', 
-      tracks: [
-          {name: 'Running'},
-          {name: 'Coding'},
-          {name: 'No aclohol'}
-        ]
-      }
+        }
     ],
     user: { 
       name: 'Andrey', streak: {name: 'running', service: 'Strava', value: '20'}
@@ -35,7 +20,6 @@ const initialState = {
   };
 
 const dashboardReducer = (state = initialState, action) => {
-
   switch (action.type) {
     case ADD_TRACK:
       let newTrack = state.newTrack;
@@ -43,17 +27,14 @@ const dashboardReducer = (state = initialState, action) => {
       state.newTrack = '';
       return {...state};
     case UPDATE_TRACK:
-      state.newTrack = action.text;
+      state.newTrack = action.name;
       return {...state};
     default:
       return state;
   }
 }
 
-export const updateTrackActionCreator = (name) => ({
-  type: UPDATE_TRACK,
-  text: name,
-  });
+export const updateTrackActionCreator = (name) => ({type: UPDATE_TRACK, name});
 
 export const addTrackActionCreator = () => ({type: ADD_TRACK});
 

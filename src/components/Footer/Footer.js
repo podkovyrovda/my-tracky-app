@@ -4,7 +4,7 @@ import Menu from '../Menu/Menu';
 
 const Footer = () => {
   return ( 
-    <div className='footer'>
+    <div className='container'>
       <Menu />
     </div>
   )
